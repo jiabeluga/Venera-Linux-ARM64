@@ -62,10 +62,16 @@ class _ToastOverlay extends StatelessWidget {
                       child: Text(
                         message,
                         style: const TextStyle(
-                            fontSize: 16, fontWeight: FontWeight.w500),
-                        maxLines: 3,
-                        overflow: TextOverflow.ellipsis,
-                      ),
+                          fontSize: 16, fontWeight: FontWeight.w500,
+                          fontFamily: "Noto Sans SC",     // 指定自行导入的字体
+                          fontFamilyFallback: [
+                            "Noto Color Emoji",              // 设置Emoji表情自动回退至此字体
+                            "Noto Sans",
+                          ],
+                        ),
+                            maxLines: 3,
+                            overflow: TextOverflow.ellipsis,
+                        ),
                     ),
                     if (trailing != null) trailing!.paddingLeft(8)
                   ],

@@ -97,6 +97,10 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  fonts:
+    - family: 'Noto Sans SC'
+      fonts:
+        - asset: assets/fonts/Noto_Sans_SC/Noto_Sans_SC.ttf
   assets:
     - assets/translation.json
     - assets/init.js

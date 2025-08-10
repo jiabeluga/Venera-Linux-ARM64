@@ -173,6 +173,11 @@ class _ButtonState extends State<Button> {
         style: TextStyle(
           color: textColor,
           fontSize: 14,
+          fontFamily: 'Noto Sans SC',     // 强行指定优先渲染内置的字体
+          fontFamilyFallback: [
+            'Noto Color Emoji',        // 设置Emoji表情字体进行优先回退
+            'Noto Sans Regular',
+          ],
         ),
         child: isLoading
             ? CircularProgressIndicator(

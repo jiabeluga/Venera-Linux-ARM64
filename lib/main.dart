@@ -145,11 +145,10 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
     String? font;
     List<String>? fallback;
     if (App.isLinux || App.isWindows) {
-      font = 'Noto Sans CJK';
+      font = 'Noto Sans SC';     // 强行指定优先渲染内置的字体
       fallback = [
+        'Noto Color Emoji',        // 设置Emoji表情字体进行优先回退
         'Segoe UI',
-        'Noto Sans SC',
-        'Noto Sans TC',
         'Noto Sans',
         'Microsoft YaHei',
         'PingFang SC',
